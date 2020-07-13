@@ -3,6 +3,7 @@
 /*
   Public Subnet
 */
+
 resource "aws_subnet" "public-subnet"{
 count = "${length(data.aws_availability_zones.azs.names)}"
   vpc_id = "${aws_vpc.default.id}"
